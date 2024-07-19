@@ -22,7 +22,7 @@ class Bot(Client):
     async def start(self):
         await super().start()
         me = await self.get_me() 
-        GROUP_ID = "-1002208828378"  # Replace YOUR_GROUP_ID with the actual group ID
+        GROUP_ID = int(os.environ.get("-1002208828378"))  # Replace YOUR_GROUP_ID with the actual group ID
         await self.send_message(GROUP_ID, f"{me.first_name} | @{me.username} 𝚂𝚃𝙰𝚁𝚃𝙴𝙳...⚡️")
         
         
